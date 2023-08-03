@@ -8,7 +8,13 @@ function increment() {
 }
 
 function save() {
-    let countStr = count + " - "
+    let countStr;
+    if(count==0)
+    {
+        return false;
+    }
+    
+    countStr = count + " - "
     saveEl.textContent += countStr
     countEl.textContent = 0
     count = 0
